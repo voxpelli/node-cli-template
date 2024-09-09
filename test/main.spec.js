@@ -1,12 +1,14 @@
 import chai from 'chai';
+import chaiAsPromised from 'chai-as-promised';
 
-// TODO: Replace with proper setup
-import { main } from '../index.js';
+import { command } from '../lib/command.js';
+
+chai.use(chaiAsPromised);
 
 chai.should();
 
 describe('something', () => {
   it('should work', async () => {
-    await main();
+    await command().should.eventually.be.an('object');
   });
 });
