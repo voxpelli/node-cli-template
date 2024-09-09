@@ -1,7 +1,7 @@
 {
-  "extends": "@voxpelli/tsconfig/node18.json",
+  "extends": "@voxpelli/tsconfig/node20.json",
   "files": [
-    "index.js"
+    "cli.js"
   ],
   "include": [
     "lib/**/*",
