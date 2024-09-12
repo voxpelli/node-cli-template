@@ -9,6 +9,6 @@ chai.should();
 
 describe('something', () => {
   it('should work', async () => {
-    await command().should.eventually.be.an('object');
+    await command(['test']).should.eventually.be.an('object');
   });
 });
