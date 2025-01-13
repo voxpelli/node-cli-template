@@ -1,14 +1,15 @@
 import chai from 'chai';
-import chaiAsPromised from 'chai-as-promised';
 
 import { command } from '../lib/command.js';
 
-chai.use(chaiAsPromised);
-
-chai.should();
+const should = chai.should();
 
 describe('something', () => {
   it('should work', async () => {
-    await command(['test']).should.eventually.be.an('object');
+    const result = await command(['test']);
+
+    should.exist(result);
+
+    result.should.be.an('object');
   });
 });
