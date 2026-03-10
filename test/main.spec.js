@@ -1,15 +1,13 @@
-import chai from 'chai';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { command } from '../lib/command.js';
-
-const should = chai.should();
-
 describe('command', () => {
   it('should parse arguments successfully', async () => {
     const result = await command(['example']);
 
-    should.exist(result);
-
-    result.should.be.an('object');
+    assert.ok(result);
+    assert.equal(result.mainInput, 'example');
+    assert.equal(typeof result.debug, 'boolean');
   });
 });
