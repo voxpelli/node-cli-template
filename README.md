@@ -52,6 +52,17 @@ Useful commands:
 - `npm run test:node` – runtime tests with c8 coverage
 - `npm run check-type-tests` – type-level contract tests
 
+## Git Hooks
+
+Husky is opt-in in this template.
+
+- `npm run husky-enable` – enable git hooks
+- `npm run husky-disable` – disable git hooks
+
+## Lockfile Policy
+
+This CLI template does not commit a lockfile by default (`package-lock=false` in `.npmrc`).
+
 ## Usage
 
 ```sh
