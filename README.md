@@ -45,6 +45,7 @@ This template uses two complementary test layers:
 
 - **Runtime tests** in `test/*.spec.js` using `node:test` and `node:assert/strict`
 - **Type-level tests** in `typetests/*.tst.ts` using `tstyche`
+- Public exports and CLI-facing contracts are validated through type-level tests.
 
 Useful commands:
 
